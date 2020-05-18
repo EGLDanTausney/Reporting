@@ -1,0 +1,5 @@
+select distinct "attributes.profileid_currentuser"--, cast(event_timestamp as date)
+from reporting.t_sessiondata_jan2020
+where event_timestamp LIKE '2020%'
+and "attributes.profileid_currentuser" != ''
+and "attributes.profileid_currentuser" is not null
